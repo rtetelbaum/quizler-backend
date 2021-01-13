@@ -1,4 +1,4 @@
 class AnswerSerializer < ActiveModel::Serializer
-  attributes :id, :answer, :correct
-  has_one :question
+  attributes :id, :answer, :correct, :question_id
+  belongs_to :question
 end

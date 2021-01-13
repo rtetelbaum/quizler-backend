@@ -1,4 +1,5 @@
 class QuizSerializer < ActiveModel::Serializer
-  attributes :id, :quizmaker, :title, :subject
-  has_one :user
+  attributes :id, :quizmaker, :title, :subject, :user_id
+	belongs_to :user
+	has_many :questions
 end
