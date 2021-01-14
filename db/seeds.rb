@@ -31,7 +31,7 @@ answer12 = Answer.create(answer: 'No', correct: false, question: question4)
 
 user2 = User.create(email: 'frank@mail.com', password: 'pass123')
 
-quiz3 = Quiz.create(quizmaker: 'roman@mail.com', title: 'First Grade Math Final', subject: 'Math', user: user2)
+quiz3 = Quiz.create(quizmaker: 'frank@mail.com', title: 'First Grade Math Final', subject: 'Math', user: user2)
 
 question5 = Question.create(question: 'What is 2 + 3?', quiz: quiz3)
 answer13 = Answer.create(answer: '4', correct: false, question: question5)
@@ -43,7 +43,7 @@ question6 = Question.create(question: 'Does 5 x 2 = 10?', quiz: quiz3)
 answer17 = Answer.create(answer: 'Yes', correct: true, question: question6)
 answer18 = Answer.create(answer: 'No', correct: false, question: question6)
 
-quiz4 = Quiz.create(quizmaker: 'roman@mail.com', title: 'Second Grade Math Final', subject: 'Math', user: user2)
+quiz4 = Quiz.create(quizmaker: 'frank@mail.com', title: 'Second Grade Math Final', subject: 'Math', user: user2)
 
 question7 = Question.create(question: 'What is 7 x 7?', quiz: quiz4)
 answer19 = Answer.create(answer: '49', correct: true, question: question7)
