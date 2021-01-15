@@ -2,12 +2,12 @@ class Api::V1::QuestionsController < ApplicationController
 
 	def index
 		questions = Question.all.includes(:answers)
-		render json: questions, except: [:created_at, :updated_at]
+		render json: questions, :include => :answers, except: [:created_at, :updated_at]
 	end
 
 	def show
 		question = Question.find(params[:id])
-		render json: question, except: [:created_at, :updated_at]
+		render json: question, :include => :answers, except: [:created_at, :updated_at]
 	end
 
 	def create

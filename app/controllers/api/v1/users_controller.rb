@@ -2,12 +2,12 @@ class Api::V1::UsersController < ApplicationController
 
 	def index
 		users = User.all.includes(:quizzes)
-		render json: users, except: [:created_at, :updated_at]
+		render json: users, :include => {:quizzes => {:questions => :answers}}, except: [:created_at, :updated_at]
 	end
 
 	def show
 		user = User.find(params[:id])
-		render json: user, except: [:created_at, :updated_at]
+		render json: user, :include => {:quizzes => {:questions => :answers}}, except: [:created_at, :updated_at]
 	end
 
 	def create
