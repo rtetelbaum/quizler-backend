@@ -1,5 +1,7 @@
 Quizler: an app to create multiple choice quizzes, email a link to 
-the quiz, and receive an email with the taker's score.
+the quiz, and receive an email with the taker's score and report.
+
+Accompanying Front End: https://github.com/rtetelbaum/quizler-frontend
 
 Copyright (C) 2021 Roman Tetelbaum
 
