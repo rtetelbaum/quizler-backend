@@ -23,14 +23,14 @@ class Api::V1::QuizzesController < ApplicationController
 
 	def update
 		quiz = Quiz.find(params[:id])
-		quiz.update(quizmaker: params[:quizmaker], title: params[:title], subject: params[:subject])
+		quiz.update(:quizmaker_name: params[:quizmaker_name], :quizmaker_email: [:quizmaker_email],title: params[:title], subject: params[:subject])
 		render json: quiz, except: [:created_at, :updated_at]
 	end
 
 	private
 
 	def quiz_params
-		params.permit(:quizmaker, :title, :subject, :user_id)
+		params.permit(:quizmaker_name, :quizmaker_email, :title, :subject, :user_id)
 	end
 
 end

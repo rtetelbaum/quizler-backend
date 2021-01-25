@@ -33,7 +33,8 @@ ActiveRecord::Schema.define(version: 2021_01_12_230652) do
   end
 
   create_table "quizzes", force: :cascade do |t|
-    t.string "quizmaker"
+    t.string "quizmaker_name"
+    t.string "quizmaker_email"
     t.string "title"
     t.string "subject"
     t.bigint "user_id", null: false

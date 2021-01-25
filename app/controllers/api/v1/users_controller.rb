@@ -23,14 +23,14 @@ class Api::V1::UsersController < ApplicationController
 
 	def update
 		user = User.find(params[:id])
-		user.update(email: params[:email], password: params[:password])
+		user.update(email: params[:email], first_name: params[:first_name], last_name: params[:last_name], password: params[:password])
 		render json: user, except: [:created_at, :updated_at]
 	end
 
 	private
 
 	def user_params
-		params.permit(:email, :password)
+		params.permit(:email, :first_name, :last_name, :password)
 	end
 
 end
